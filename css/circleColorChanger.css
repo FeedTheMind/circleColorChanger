@@ -1,0 +1,88 @@
+/***************
+General
+***************/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(51, 45, 45, .9);
+  font-family: Georgia, sans-serif;
+  color: #fff;
+}
+
+.circleWrapper {
+  width: 500px;
+  height: 750px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+h1 {
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-align: center;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.2em;
+  padding: 10px;
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.keyFrame {
+  border-radius: 5px;
+  -webkit-animation: shadowMove 6s;
+          animation: shadowMove 6s;
+}
+
+.keyFrame:hover {
+  border-radius: 5px;
+  -webkit-animation: shadowMove 3s infinite;
+          animation: shadowMove 3s infinite;
+}
+
+@-webkit-keyframes shadowMove {
+  50% {box-shadow: -10px 10px 5px 0 rgba(255, 255, 255, 0.95);}
+}
+
+@keyframes shadowMove {
+  50% {box-shadow: -10px 10px 5px 0 rgba(255, 255, 255, 0.95);}
+}
+
+.cFix:after,
+.cFix:before {
+  content: '';
+  display: table;
+  height: 0;
+  clear: both;
+}
+
+/***************
+jQuery Class(es)
+***************/
+.circle {
+  background: #fbbe6e;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  float: left;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.circleRadius {
+  border-radius: 0;
+}
+
+.circle:hover {
+  border-radius: 0;
+  box-shadow: -1px 5px 5px 0 rgba(0, 0, 0, 0.75);
+}
